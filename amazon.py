@@ -8,8 +8,7 @@ class AmazonScrapper:
     def __init__(self):
         self.driver = None
         self.items_to_search = None
-        self.homepage_link = None
-
+        
     def initialize_defaults(self):
         self.driver = webdriver.Chrome("C:/Users/dnnsw/Desktop/my_projects/selenium_5/assets/chromedriver.exe")
         self.items_to_search = ["Redmi Note 11", "Redmi Note 10"]
