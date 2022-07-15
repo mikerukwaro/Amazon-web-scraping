@@ -3,7 +3,6 @@ from selenium import webdriver
 import time
 import pandas as pd
 
-
 class AmazonScrapper:
     def __init__(self):
         self.driver = None
@@ -38,10 +37,8 @@ class AmazonScrapper:
                 model_price = self.driver.find_element(By.XPATH, f'''//div[@data-asin="{data_assigned}"]//span[@class="a-price-whole"]''').text
                 print(f"{model_name} >> {model_price}\n")
 
-
             except Exception as e:
                 pass
-
 
     def process_provided_links(self):
         for item in self.items_to_search:
@@ -55,8 +52,6 @@ class AmazonScrapper:
         self.setup_driver()
         self.navigate_to_homepage()
         self.process_provided_links()
-
-
 
 if __name__ == "__main__":
     scrapper = AmazonScrapper()
